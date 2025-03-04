@@ -5,20 +5,7 @@ export interface BaseInsight {
   timeAgo: string;
   description: string;
   tags: string[];
-  source: "YouTube" | "Twitter" | "Reddit";
-}
-
-// Twitter-specific insight properties
-export interface TwitterInsight {
-  id: string;
-  title: string;
-  username: string;
-  handle: string;
-  timeAgo: string;
-  description: string;
-  tags: string[];
-  likes: number;
-  retweets: number;
+  source: "YouTube" | "Reddit";
 }
 
 // YouTube-specific insight properties
@@ -31,6 +18,11 @@ export interface YouTubeInsight {
   tags: string[];
   views: number;
   likes: number;
+  videoId: string;
+  thumbnailUrl: string;
+  duration: string;
+  summary?: string;
+  aiRelatedContent?: string;
 }
 
 // Reddit-specific insight properties
@@ -47,17 +39,6 @@ export interface RedditInsight {
 }
 
 // Transform functions to convert platform-specific data to BaseInsight
-export function transformTwitterToInsight(tweet: TwitterInsight): BaseInsight {
-  return {
-    id: tweet.id,
-    title: tweet.title,
-    timeAgo: tweet.timeAgo,
-    description: tweet.description,
-    tags: tweet.tags,
-    source: "Twitter"
-  };
-}
-
 export function transformYouTubeToInsight(video: YouTubeInsight): BaseInsight {
   return {
     id: video.id,
@@ -78,4 +59,27 @@ export function transformRedditToInsight(post: RedditInsight): BaseInsight {
     tags: post.tags,
     source: "Reddit"
   };
+}
+
+// YouTube transcript segment
+export interface TranscriptSegment {
+  text: string;
+  offset: number;
+  duration: number;
+}
+
+// Full transcript type
+export interface VideoTranscript {
+  videoId: string;
+  segments: TranscriptSegment[];
+  fullText: string;
+}
+
+// YouTube video summary
+export interface VideoSummary {
+  videoId: string;
+  title: string;
+  summary: string;
+  aiRelatedContent: string;
+  keyInsights: string[];
 } 

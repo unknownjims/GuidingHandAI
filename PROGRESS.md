@@ -16,22 +16,23 @@
 - ✅ Created dashboard view with mock data
 - ✅ Implemented filtering functionality
 
-#### Twitter Integration
-- ✅ Created API types for Twitter data
-- ✅ Implemented Twitter API client (currently using mock data)
-- ✅ Created Next.js API route for Twitter data
-- ✅ Built custom React hook for fetching Twitter insights
-- ✅ Implemented Twitter insights UI component
-- ✅ Added dedicated Twitter feed page
-- ✅ Set up environment variables for Twitter API credentials
+#### YouTube Integration
+- ✅ Created API types for YouTube data and transcripts
+- ✅ Implemented YouTube transcript extraction
+- ✅ Created Next.js API route for YouTube video processing
+- ✅ Built custom React hook for processing YouTube videos
+- ✅ Implemented YouTube video processor UI component
+- ✅ Added video summary generation
+- ✅ Implemented extraction of AI-related content
+- ✅ Added ability to add insights to personal instructions
 
 ### Next Steps
 
 #### Short-term Tasks
-- 🔲 Connect to real Twitter API with credentials
+- 🔲 Connect to YouTube Data API for more comprehensive video data
 - 🔲 Implement Reddit data integration
-- 🔲 Implement YouTube data integration
 - 🔲 Create unified insights view combining all platforms
+- 🔲 Add video history tracking
 
 #### Medium-term Tasks
 - 🔲 Add user authentication/accounts
@@ -48,11 +49,11 @@
 ## Technical Implementation Details
 
 ### Data Flow
-1. Data is fetched from social media APIs (Twitter, Reddit, YouTube)
-2. Transformed into standardized insight formats
-3. Served through Next.js API routes
-4. Consumed by React components via custom hooks
-5. Displayed with loading states and error handling
+1. User inputs a YouTube video URL
+2. System extracts video transcript using YouTube Transcript API
+3. Application generates summary and identifies AI-related content
+4. User can add extracted insights to personal instructions
+5. Insights are displayed with proper formatting and UI components
 
 ### Key Technologies
 - Next.js (React framework)
@@ -60,8 +61,9 @@
 - Tailwind CSS (Styling)
 - API routes (Backend functionality)
 - React Hooks (State management)
+- YouTube Transcript API (Content extraction)
 
 ## Notes
-- Currently using mock data for Twitter integration
-- Environment setup complete for Twitter API integration
+- Currently using mock summary generation (would be replaced with real AI summarization in production)
+- YouTube video processor implemented with transcript extraction
 - UI components built with responsive design 

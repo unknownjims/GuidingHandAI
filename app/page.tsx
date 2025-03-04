@@ -147,10 +147,10 @@ export default function Home() {
           AI Tool Instructions
         </button>
         <Link 
-          href="/twitter-feed" 
-          className="flex-1 py-3 px-4 text-center bg-blue-500 text-white hover:bg-blue-600 transition-colors"
+          href="/youtube-processor" 
+          className="flex-1 py-3 px-4 text-center bg-red-600 text-white hover:bg-red-700 transition-colors"
         >
-          Twitter Feed
+          YouTube Processor
         </Link>
       </div>
 

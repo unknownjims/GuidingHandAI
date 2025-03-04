@@ -1,13 +1,17 @@
 # Prompt Engineering Insights Compiler
 
-A web application that compiles and analyzes prompt engineering best practices from social media platforms, enabling users to discover the latest techniques and generate personalized instructions.
+A web application that compiles and analyzes prompt engineering best practices from YouTube videos, enabling users to discover the latest techniques and generate personalized instructions.
 
 ## Features
 
-- Dashboard showing latest prompt engineering insights from social media (Twitter/X, YouTube, Reddit)
+- Dashboard showing latest prompt engineering insights 
 - Personal Instructions Generator based on user preferences
 - AI Tool Instructions Generator for optimizing prompts for specific AI tools
-- Real-time Twitter feed of prompt engineering insights (implemented with mock data, ready for API integration)
+- YouTube Video Processor that:
+  - Extracts video transcripts
+  - Generates video summaries
+  - Identifies AI-related content
+  - Allows adding extracted insights to personal instructions
 - Filtering capabilities for insights by source platform
 
 ## Tech Stack
@@ -17,6 +21,7 @@ A web application that compiles and analyzes prompt engineering best practices f
 - Tailwind CSS
 - shadcn/ui components
 - API Routes for backend functionality
+- YouTube transcript extraction
 
 ## Getting Started
 
@@ -25,17 +30,11 @@ A web application that compiles and analyzes prompt engineering best practices f
    ```bash
    npm install
    ```
-3. Set up environment variables:
-   ```bash
-   cp .env.local.example .env.local
-   ```
-   Then edit `.env.local` to add your API credentials
-
-4. Run the development server:
+3. Run the development server:
    ```bash
    npm run dev
    ```
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Project Structure
 
@@ -49,13 +48,14 @@ A web application that compiles and analyzes prompt engineering best practices f
 
 ## Current Status
 
-The application currently simulates fetching data from social media platforms with mock implementations. The Twitter feed integration is complete and ready to be connected to the real Twitter API once credentials are provided.
+The application currently extracts YouTube video transcripts, generates summaries, and identifies AI-related content. The YouTube Video Processor allows users to extract insights from videos and add them to their personal instructions database.
 
 See [PROGRESS.md](./PROGRESS.md) for detailed progress tracking and upcoming tasks.
 
 ## Future Enhancements
 
-- Connect to real social media APIs (Twitter/X, YouTube, Reddit)
+- Connect to YouTube Data API for more comprehensive video data
+- Implement Reddit data integration
 - Implement user authentication
 - Add insight collection/saving features
 - Create analytics dashboard for prompt engineering trends
